@@ -28,9 +28,10 @@ BACKENDS = {
         "capability": 1,
         "base_url": "http://localhost:11434/v1",
         "model": "llama3.2:1b",
+        "enabled": True,
     },
     "groq": {
-        "cost_per_1k_tokens": 0.0,
+        "cost_per_1k_tokens": 0.0001,
         "latency_s": 0.36,
         "rpm_limit": 30,
         "tpm_limit": 6000,
@@ -38,9 +39,10 @@ BACKENDS = {
         "capability": 2,
         "base_url": "https://api.groq.com/openai/v1",
         "model": "llama-3.1-8b-instant",
+        "enabled": True,
     },
     "gemini": {
-        "cost_per_1k_tokens": 0.0,
+        "cost_per_1k_tokens": 0.0015,
         "latency_s": 1.53,
         "rpm_limit": None,       # not modeled because a stable RPM value is not used
         "tpm_limit": 250000,
@@ -48,5 +50,23 @@ BACKENDS = {
         "capability": 5,
         "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
         "model": "gemini-2.5-flash",
+        "enabled": True,
+    },
+    # Hypothetical 4th backend — Cerebras Inference (capability 3).
+    # Excluded from live /route execution (enabled=False) because API access
+    # was not available at experiment time. Included in /compare simulations
+    # and sensitivity experiments to demonstrate MILP value when Medium tasks
+    # have a genuine routing choice between two capable backends.
+    "cerebras": {
+        "cost_per_1k_tokens": 0.0002,
+        "latency_s": 0.25,
+        "rpm_limit": 30,
+        "tpm_limit": None,
+        "rpd_limit": None,
+        "capability": 3,
+        "base_url": "https://api.cerebras.ai/v1",
+        "model": "llama-3.3-70b",
+        "enabled": False,
     },
 }
+

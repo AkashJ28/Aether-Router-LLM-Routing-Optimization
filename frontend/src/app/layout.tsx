@@ -90,6 +90,57 @@ export default function RootLayout({
               </svg>
               Analytics
             </Link>
+
+            <Link
+              href="/sensitivity"
+              className="flex items-center gap-3 px-3 py-2 rounded text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/50 transition-all font-mono text-xs group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:text-cyan-400 transition-colors"
+              >
+                <path d="M2 12h5" />
+                <path d="M17 12h5" />
+                <path d="m4.93 4.93 3.54 3.54" />
+                <path d="m15.54 15.54 3.53 3.53" />
+                <path d="M12 2v5" />
+                <path d="M12 17v5" />
+                <path d="m4.93 19.07 3.54-3.54" />
+                <path d="m15.54 8.46 3.53-3.53" />
+              </svg>
+              Sensitivity Lab
+            </Link>
+
+            <Link
+              href="/pareto"
+              className="flex items-center gap-3 px-3 py-2 rounded text-zinc-400 hover:text-zinc-100 hover:bg-zinc-900/50 transition-all font-mono text-xs group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="group-hover:text-amber-400 transition-colors"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 2a10 10 0 0 1 10 10" />
+                <path d="M12 12 2.1 10.5" />
+              </svg>
+              Pareto Lab
+            </Link>
           </nav>
 
           {/* System Footer Status */}

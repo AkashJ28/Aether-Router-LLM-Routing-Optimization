@@ -110,3 +110,14 @@ CLAUDE.md
 *.log
 Documentation/
 backend/tests/.pytest_cache/
+
+# PuLP solver intermediary files (generated during MILP solve)
+*.lp
+*.mps
+
+# Experiment output artifacts
+*.csv
+results/
+
+# Next.js build cache (explicit scoping in addition to root-level pattern)
+frontend/.next/
